@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import Papa from 'papaparse'
+import ChatbotPanel from './ChatbotPanel'
 import {
   Bar,
   BarChart,
@@ -369,6 +370,14 @@ function App() {
           </div>
         </div>
       </section>
+
+      <ChatbotPanel
+        kpis={kpis}
+        lineData={lineData}
+        countryData={countryData}
+        pieData={pieData}
+        activeFilters={{ activeTab, search, countryFilter, ratingFilter, genreFilter }}
+      />
     </div>
   )
 }
